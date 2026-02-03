@@ -1,0 +1,535 @@
+---
+import "../styles/global.css";
+
+const planes = [
+    {
+        nombre: "Landing Page",
+        precio: "$12,000.00 - $18,400.00",
+        color: "from-cyan-400 to-cyan-500",
+        destacado: false,
+    },
+    {
+        nombre: "Web Informativa",
+        precio: "$17,500.00 - $30,000.00",
+        color: "from-blue-500 to-blue-600",
+        destacado: true,
+    },
+    {
+        nombre: "E-commerce WhatsApp",
+        precio: "$20,400.00 - $25,135.00",
+        color: "from-green-400 to-green-500",
+        destacado: false,
+    },
+    {
+        nombre: "E-commerce",
+        precio: "$25,555.00 - $56,000.00",
+        color: "from-orange-400 to-orange-500",
+        destacado: false,
+    },
+];
+
+const beneficios = [
+    {
+        icon: "🌐",
+        titulo: "Accesibilidad",
+        desc: "Tu empresa disponible las 24 horas del día, los 7 días de la semana para clientes de todo el mundo.",
+    },
+    {
+        icon: "💼",
+        titulo: "Profesionalismo",
+        desc: "Un sitio web bien diseñado transmite confianza, credibilidad y fortalece la imagen de tu marca.",
+    },
+    {
+        icon: "⚙️",
+        titulo: "Personalizado",
+        desc: "Cada proyecto es único y se adapta completamente a las necesidades específicas de tu negocio.",
+    },
+];
+
+const caracteristicas = [
+    {
+        icon: "💻",
+        titulo: "Contenido",
+        desc: "Gestión de contenido fácil y eficiente con editores visuales intuitivos.",
+    },
+    {
+        icon: "📱",
+        titulo: "Responsivo",
+        desc: "Diseños adaptables que lucen perfectos en dispositivos móviles, tablets y escritorio.",
+    },
+    {
+        icon: "🔍",
+        titulo: "SEO",
+        desc: "Optimización para motores de búsqueda para mejorar tu posicionamiento en Google.",
+    },
+    {
+        icon: "🖱️",
+        titulo: "Intuitivo",
+        desc: "Interfaz amigable para que tú mismo puedas actualizar tu sitio sin conocimientos técnicos.",
+    },
+    {
+        icon: "🎨",
+        titulo: "Personalización",
+        desc: "Miles de temas y plugins disponibles para personalizar cada aspecto de tu web.",
+    },
+    {
+        icon: "📈",
+        titulo: "Escalable",
+        desc: "Tu sitio puede crecer junto con tu negocio, añadiendo nuevas funcionalidades según las necesites.",
+    },
+];
+
+const trabajos = [
+    {
+        imagen: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300&fit=crop",
+        titulo: "Corporate Site",
+    },
+    {
+        imagen: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+        titulo: "Dashboard App",
+    },
+    {
+        imagen: "https://images.unsplash.com/photo-1522542550221-31fd8575f7b3?w=400&h=300&fit=crop",
+        titulo: "E-commerce",
+    },
+    {
+        imagen: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+        titulo: "Portfolio",
+    },
+];
+---
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Desarrollo web profesional. Creamos sitios web modernos, rápidos y optimizados para tu negocio."
+        />
+        <title>Desarrollo Web - Plantilla 1</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .hero-bg {
+                background: var(--gradient-hero);
+            }
+        </style>
+    </head>
+    <body class="bg-white text-gray-900 overflow-x-hidden">
+        <!-- Navbar -->
+        <nav class="hero-bg py-4">
+            <div
+                class="container mx-auto px-6 flex justify-between items-center"
+            >
+                <div class="flex items-center">
+                    <a
+                        href="/"
+                        class="bg-white/20 p-2 rounded text-white font-bold text-xl px-4"
+                        >Logo.</a
+                    >
+                </div>
+                <div class="hidden md:flex space-x-8 text-white/90 font-medium">
+                    <a href="/" class="hover:text-white transition">Inicio</a>
+                    <a href="#" class="hover:text-white transition">Nosotros</a>
+                    <a
+                        href="#"
+                        class="text-white font-bold border-b-2 border-white pb-1"
+                        >Servicios ▾</a
+                    >
+                    <a href="/contacto" class="hover:text-white transition"
+                        >Contacto</a
+                    >
+                </div>
+                <div class="flex space-x-4 text-white">
+                    <span class="cursor-pointer hover:scale-110 transition"
+                        >f</span
+                    >
+                    <span class="cursor-pointer hover:scale-110 transition"
+                        >📷</span
+                    >
+                    <span class="cursor-pointer hover:scale-110 transition"
+                        >🛒</span
+                    >
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section
+            class="hero-bg py-16 md:py-20 text-white relative overflow-hidden"
+        >
+            <div class="container mx-auto px-6">
+                <div
+                    class="flex flex-col md:flex-row items-center justify-between gap-8"
+                >
+                    <!-- Text Content -->
+                    <div class="md:w-1/2">
+                        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                            Desarrollo web
+                        </h1>
+                        <p class="text-white/80 text-lg max-w-md">
+                            Expresa tu identidad e impulsa tus ventas, nosotros
+                            te ayudamos a hacerlo realidad con sitios web
+                            profesionales.
+                        </p>
+                    </div>
+
+                    <!-- Image with floating icons -->
+                    <div class="md:w-1/2 relative flex justify-center">
+                        <div class="relative">
+                            <div
+                                class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden bg-yellow-300/20 flex items-center justify-center"
+                            >
+                                <img
+                                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop"
+                                    alt="Desarrollador Web"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+
+                            <!-- Floating Icons -->
+                            <div
+                                class="absolute -top-2 left-8 bg-cyan-400 p-3 rounded-xl shadow-lg"
+                            >
+                                <span class="text-lg">🌐</span>
+                            </div>
+                            <div
+                                class="absolute top-4 -right-2 bg-green-500 p-3 rounded-xl shadow-lg"
+                            >
+                                <span class="text-white text-lg">📱</span>
+                            </div>
+                            <div
+                                class="absolute bottom-20 -right-4 bg-blue-500 p-3 rounded-xl shadow-lg"
+                            >
+                                <span class="text-white text-lg">💻</span>
+                            </div>
+                            <div
+                                class="absolute bottom-4 left-4 bg-orange-500 p-3 rounded-xl shadow-lg"
+                            >
+                                <span class="text-white text-lg">⚡</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto"
+                >
+                    {
+                        beneficios.map((item) => (
+                            <div class="text-center p-6">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-indigo-100 rounded-full flex items-center justify-center text-3xl">
+                                    {item.icon}
+                                </div>
+                                <h3 class="text-lg font-bold text-indigo-600 mb-2">
+                                    {item.titulo}
+                                </h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">
+                                    {item.desc}
+                                </p>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- Planes Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2
+                        class="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+                    >
+                        Planes sitios web
+                    </h2>
+                    <p class="text-gray-500 max-w-2xl mx-auto text-sm">
+                        El precio puede variar de acuerdo a tus necesidades
+                        específicas, pero nuestras características base y
+                        experiencia se mantienen en todos los proyectos.
+                    </p>
+                </div>
+
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
+                >
+                    {
+                        planes.map((plan) => (
+                            <div
+                                class={`bg-gradient-to-br ${plan.color} rounded-2xl p-6 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2`}
+                            >
+                                <div class="bg-white/20 rounded-full w-12 h-12 flex items-center justify-center mb-4 mx-auto">
+                                    <span class="text-xl">💻</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-center mb-3">
+                                    {plan.nombre}
+                                </h3>
+                                <p class="text-white/90 text-center text-sm font-medium mb-4">
+                                    {plan.precio}
+                                </p>
+                                <button class="w-full bg-white/20 hover:bg-white/30 text-white font-semibold py-2 px-4 rounded-lg transition text-sm">
+                                    Conocer más
+                                </button>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- WordPress Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2
+                        class="text-2xl md:text-3xl font-bold text-gray-800 mb-4"
+                    >
+                        WordPress, la plataforma líder en la creación de sitios
+                        web
+                    </h2>
+                    <p class="text-gray-500 max-w-xl mx-auto text-sm">
+                        Utilizamos WordPress por su flexibilidad, seguridad y
+                        facilidad de uso, potenciando tu presencia digital.
+                    </p>
+                </div>
+
+                <div
+                    class="grid gap-6 max-w-5xl mx-auto"
+                    style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));"
+                >
+                    {
+                        caracteristicas.map((item) => (
+                            <div class="bg-white rounded-2xl p-6 hover:shadow-lg transition-shadow border border-gray-100">
+                                <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center text-2xl mb-4">
+                                    {item.icon}
+                                </div>
+                                <h4 class="font-bold text-indigo-600 mb-2">
+                                    {item.titulo}
+                                </h4>
+                                <p class="text-gray-500 text-sm leading-relaxed">
+                                    {item.desc}
+                                </p>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- Nuestro Trabajo Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2
+                        class="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+                    >
+                        Nuestro trabajo
+                    </h2>
+                    <p class="text-gray-500">
+                        +30 sitios web publicados online
+                    </p>
+                </div>
+
+                <div
+                    class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto"
+                >
+                    {
+                        trabajos.map((trabajo) => (
+                            <div class="group rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                                <div class="aspect-[4/3] overflow-hidden">
+                                    <img
+                                        src={trabajo.imagen}
+                                        alt={trabajo.titulo}
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="hero-bg py-16">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+                    ¿Dudas? ¡Estamos aquí para ayudar!
+                </h2>
+                <p class="text-white/70 mb-8 max-w-xl mx-auto text-sm">
+                    Una vez que hayas tomado la decisión de comenzar tu proyecto
+                    o tengas alguna duda, contáctanos para tener el privilegio
+                    de acompañarte en el proceso.
+                </p>
+                <a
+                    href="/contacto"
+                    class="inline-block bg-white text-indigo-600 font-bold py-3 px-10 rounded-lg hover:bg-gray-100 transition-all shadow-lg"
+                >
+                    Contáctanos
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-slate-800 text-white py-16">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                    <!-- Logo & Social -->
+                    <div>
+                        <div
+                            class="bg-indigo-600 p-3 rounded font-bold text-2xl px-5 inline-block mb-6"
+                        >
+                            Logo.
+                        </div>
+                        <div class="flex space-x-3">
+                            <a
+                                href="#"
+                                class="w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition"
+                                >f</a
+                            >
+                            <a
+                                href="#"
+                                class="w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition"
+                                >𝕏</a
+                            >
+                            <a
+                                href="#"
+                                class="w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition"
+                                >▶</a
+                            >
+                            <a
+                                href="#"
+                                class="w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition"
+                                >in</a
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Información de contacto -->
+                    <div>
+                        <h4 class="font-bold mb-4 text-sm">
+                            Información de contacto
+                        </h4>
+                        <ul class="space-y-3 text-white/70 text-sm">
+                            <li class="flex items-center space-x-2">
+                                <span>📞</span>
+                                <span>(123) 456 7890</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span>📧</span>
+                                <span>example@agency.com</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span>📍</span>
+                                <span
+                                    >457 Morningview Lane<br />New York USA</span
+                                >
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span>🕐</span>
+                                <span
+                                    >Lunes – viernes<br />9:00 am a 5:00 pm</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Navegación -->
+                    <div>
+                        <h4 class="font-bold mb-4 text-sm">Navegación</h4>
+                        <ul class="space-y-3 text-white/70 text-sm">
+                            <li>
+                                <a href="/" class="hover:text-white transition"
+                                    >Inicio</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/contacto"
+                                    class="hover:text-white transition"
+                                    >Contacto</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-white transition"
+                                    >Nosotros</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Servicios -->
+                    <div>
+                        <h4 class="font-bold mb-4 text-sm">Servicios</h4>
+                        <ul class="space-y-3 text-white/70 text-sm">
+                            <li>
+                                <a
+                                    href="/administracion-de-redes"
+                                    class="hover:text-white transition"
+                                    >Administración de Redes</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-white transition"
+                                    >Agente IA</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-white transition"
+                                    >Campañas</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-white transition"
+                                    >Creadores UGC</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/desarrollo-web"
+                                    class="hover:text-white transition"
+                                    >Desarrollo Web</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/diseno-grafico"
+                                    class="hover:text-white transition"
+                                    >Diseño Gráfico</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-white transition"
+                                    >Embudos de Venta</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-white transition"
+                                    >Videomarketing</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div
+                    class="pt-8 border-t border-white/20 text-center text-white/50 text-xs"
+                >
+                    © 2026 Plantilla 1. Todos los derechos reservados
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
