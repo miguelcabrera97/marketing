@@ -1,0 +1,465 @@
+---
+import "../styles/global.css";
+
+const beneficios = [
+    {
+        icon: "💬",
+        titulo: "Engagement",
+        desc: "Es un formato altamente atractivo que puede captar y mantener la atención de tu audiencia.",
+    },
+    {
+        icon: "🌍",
+        titulo: "Mayor alcance",
+        desc: "Ampliamente compartido en plataformas de redes sociales y puede volverse viral rápidamente.",
+    },
+    {
+        icon: "📱",
+        titulo: "Versátil",
+        desc: "Versatilidad te permite adaptar tu contenido a diferentes objetivos y etapas del embudo.",
+    },
+];
+
+const planes = [
+    {
+        nombre: "Video Básico",
+        precio: "$975.00 - $2,320.50",
+        duracion: "Menos de 30 seg. - 60 seg.",
+        color: "bg-white border-gray-100",
+        btnColor: "bg-indigo-600 hover:bg-indigo-700",
+        destacado: false,
+    },
+    {
+        nombre: "Video Inter",
+        precio: "$1,960.00 - $4,641.00",
+        duracion: "Menos de 30 seg. - 60 seg.",
+        color: "bg-indigo-600",
+        btnColor: "bg-white/20 hover:bg-white/30",
+        destacado: true,
+    },
+    {
+        nombre: "Video Completo",
+        precio: "$2,600.00 - $11,602.50",
+        duracion: "Mensual - Anual",
+        color: "bg-white border-gray-100",
+        btnColor: "bg-indigo-600 hover:bg-indigo-700",
+        destacado: false,
+    },
+    {
+        nombre: "Narración de Voz",
+        precio: "$650.00 - $1,300.00",
+        duracion: "Menos de 30 seg. - 60 seg.",
+        color: "bg-indigo-600",
+        btnColor: "bg-white/20 hover:bg-white/30",
+        destacado: true,
+    },
+];
+---
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Videomarketing profesional. Creamos contenido audiovisual que conecta con tu audiencia y genera resultados."
+        />
+        <title>Videomarketing - Plantilla 1</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .hero-bg {
+                background: var(--gradient-hero);
+            }
+        </style>
+    </head>
+    <body class="bg-white text-gray-900 overflow-x-hidden">
+        <!-- Navbar -->
+        <nav class="bg-white py-4 shadow-sm">
+            <div
+                class="container mx-auto px-6 flex justify-between items-center"
+            >
+                <div class="flex items-center">
+                    <a
+                        href="/"
+                        class="bg-indigo-600 p-2 rounded text-white font-bold text-xl px-4"
+                        >Logo.</a
+                    >
+                </div>
+                <div class="hidden md:flex space-x-8 text-gray-600 font-medium">
+                    <a href="/" class="hover:text-indigo-600 transition"
+                        >Inicio</a
+                    >
+                    <a href="#" class="hover:text-indigo-600 transition"
+                        >Nosotros</a
+                    >
+                    <a href="#" class="text-indigo-600 font-bold">Servicios ▾</a
+                    >
+                    <a href="/contacto" class="hover:text-indigo-600 transition"
+                        >Contacto</a
+                    >
+                </div>
+                <div class="flex space-x-4 text-gray-600">
+                    <span
+                        class="cursor-pointer hover:text-indigo-600 transition"
+                        >f</span
+                    >
+                    <span
+                        class="cursor-pointer hover:text-indigo-600 transition"
+                        >📷</span
+                    >
+                    <span
+                        class="cursor-pointer hover:text-indigo-600 transition"
+                        >🛒</span
+                    >
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section
+            class="hero-bg py-16 md:py-20 text-white relative overflow-hidden"
+        >
+            <div class="container mx-auto px-6">
+                <div
+                    class="flex flex-col md:flex-row items-center justify-between gap-8"
+                >
+                    <!-- Text Content -->
+                    <div class="md:w-1/2">
+                        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                            Videomarketing
+                        </h1>
+                        <p class="text-white/80 text-lg max-w-md">
+                            ¡Dale vida a tu mensaje con la magia del
+                            videomarketing!
+                        </p>
+                    </div>
+
+                    <!-- Image with floating icons -->
+                    <div class="md:w-1/2 relative flex justify-center">
+                        <div class="relative">
+                            <div
+                                class="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden bg-white/10 flex items-center justify-center"
+                            >
+                                <img
+                                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=400&fit=crop"
+                                    alt="Videomarketing"
+                                    class="w-full h-full object-cover rounded-2xl"
+                                />
+                            </div>
+
+                            <!-- Floating Icons -->
+                            <div
+                                class="absolute -top-4 right-8 bg-white p-3 rounded-xl shadow-lg"
+                            >
+                                <span class="text-lg">🎬</span>
+                            </div>
+                            <div
+                                class="absolute top-1/2 -right-4 bg-blue-500 p-3 rounded-xl shadow-lg"
+                            >
+                                <span class="text-white text-lg">📱</span>
+                            </div>
+                            <div
+                                class="absolute bottom-8 -left-4 bg-pink-500 p-3 rounded-xl shadow-lg"
+                            >
+                                <span class="text-white text-lg">▶️</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <div
+                    class="grid gap-8 max-w-5xl mx-auto"
+                    style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));"
+                >
+                    {
+                        beneficios.map((item) => (
+                            <div class="text-center p-6">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-indigo-100 rounded-full flex items-center justify-center text-3xl">
+                                    {item.icon}
+                                </div>
+                                <h3 class="text-lg font-bold text-indigo-600 mb-2">
+                                    {item.titulo}
+                                </h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">
+                                    {item.desc}
+                                </p>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- Genera Contenido Section -->
+        <section class="hero-bg py-16">
+            <div class="container mx-auto px-6">
+                <div
+                    class="flex flex-col md:flex-row items-center gap-12 max-w-5xl mx-auto"
+                >
+                    <!-- Text Content -->
+                    <div class="md:w-1/2 text-white">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                            Genera contenido<br />audiovisual
+                        </h2>
+                        <p class="text-white/80 leading-relaxed">
+                            Convierte espectadores en clientes, cautiva a tu
+                            audiencia y destaca en el mundo digital. ¡Potencia
+                            tu marca con contenido visualmente cautivador y
+                            logra resultados sorprendentes!
+                        </p>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="md:w-1/2 relative">
+                        <div class="relative">
+                            <img
+                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=350&fit=crop"
+                                alt="Contenido Audiovisual"
+                                class="w-full rounded-2xl shadow-xl"
+                            />
+                            <!-- Play button overlay -->
+                            <div
+                                class="absolute top-4 right-4 bg-white p-3 rounded-full shadow-lg"
+                            >
+                                <span class="text-indigo-600 text-xl">▶</span>
+                            </div>
+                            <!-- Bottom floating element -->
+                            <div
+                                class="absolute -bottom-4 right-8 bg-pink-500 p-3 rounded-xl shadow-lg"
+                            >
+                                <span class="text-white">📹</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Planes Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2
+                        class="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+                    >
+                        Planes de videomarketing
+                    </h2>
+                    <p class="text-gray-500">
+                        Convierte espectadores en clientes
+                    </p>
+                </div>
+
+                <div
+                    class="grid gap-6 max-w-5xl mx-auto"
+                    style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));"
+                >
+                    {
+                        planes.map((plan) => (
+                            <div
+                                class={`rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 text-center border ${plan.destacado ? plan.color + " text-white" : plan.color}`}
+                            >
+                                <h3
+                                    class={`text-lg font-bold mb-3 ${plan.destacado ? "text-white" : "text-gray-800"}`}
+                                >
+                                    {plan.nombre}
+                                </h3>
+                                <p
+                                    class={`text-xl font-bold mb-2 ${plan.destacado ? "text-white" : "text-gray-800"}`}
+                                >
+                                    {plan.precio}
+                                </p>
+                                <p
+                                    class={`text-xs mb-6 ${plan.destacado ? "text-white/70" : "text-gray-400"}`}
+                                >
+                                    {plan.duracion}
+                                </p>
+                                <button
+                                    class={`${plan.btnColor} text-white font-semibold py-2 px-6 rounded-lg transition text-sm w-full`}
+                                >
+                                    Contratar
+                                </button>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="hero-bg py-16">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+                    ¿Dudas? ¡Estamos aquí para ayudar!
+                </h2>
+                <p class="text-white/70 mb-8 max-w-xl mx-auto text-sm">
+                    Una vez realizada tu compra recibirás un correo de
+                    confirmación y enseguida nos pondremos en contacto contigo
+                    para iniciar el proceso del servicio contratado.
+                </p>
+                <a
+                    href="/contacto"
+                    class="inline-block bg-cyan-400 hover:bg-cyan-500 text-white font-bold py-3 px-10 rounded-lg transition-all shadow-lg"
+                >
+                    Contáctanos
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-slate-800 text-white py-16">
+            <div class="container mx-auto px-6">
+                <div
+                    class="grid gap-10 mb-12"
+                    style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));"
+                >
+                    <!-- Logo & Social -->
+                    <div>
+                        <div
+                            class="bg-indigo-600 p-3 rounded font-bold text-2xl px-5 inline-block mb-6"
+                        >
+                            Logo.
+                        </div>
+                        <div class="flex space-x-3">
+                            <a
+                                href="#"
+                                class="w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition"
+                                >f</a
+                            >
+                            <a
+                                href="#"
+                                class="w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition"
+                                >𝕏</a
+                            >
+                            <a
+                                href="#"
+                                class="w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition"
+                                >▶</a
+                            >
+                            <a
+                                href="#"
+                                class="w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition"
+                                >in</a
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Información de contacto -->
+                    <div>
+                        <h4 class="font-bold mb-4 text-sm">
+                            Información de contacto
+                        </h4>
+                        <ul class="space-y-3 text-white/70 text-sm">
+                            <li class="flex items-center space-x-2">
+                                <span>📞</span>
+                                <span>(123) 456 7890</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span>📧</span>
+                                <span>example@agency.com</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span>📍</span>
+                                <span
+                                    >457 Morningview Lane<br />New York USA</span
+                                >
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span>🕐</span>
+                                <span
+                                    >Lunes – viernes<br />9:00 am a 5:00 pm</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Navegación -->
+                    <div>
+                        <h4 class="font-bold mb-4 text-sm">Navegación</h4>
+                        <ul class="space-y-3 text-white/70 text-sm">
+                            <li>
+                                <a href="/" class="hover:text-white transition"
+                                    >Inicio</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/contacto"
+                                    class="hover:text-white transition"
+                                    >Contacto</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-white transition"
+                                    >Nosotros</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Servicios -->
+                    <div>
+                        <h4 class="font-bold mb-4 text-sm">Servicios</h4>
+                        <ul class="space-y-3 text-white/70 text-sm">
+                            <li>
+                                <a
+                                    href="/administracion-de-redes"
+                                    class="hover:text-white transition"
+                                    >Administración de Redes</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-white transition"
+                                    >Agente IA</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/campanas"
+                                    class="hover:text-white transition"
+                                    >Campañas</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-white transition"
+                                    >Creadores UGC</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/desarrollo-web"
+                                    class="hover:text-white transition"
+                                    >Desarrollo Web</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/diseno-grafico"
+                                    class="hover:text-white transition"
+                                    >Diseño Gráfico</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-white transition"
+                                    >Embudos de Venta</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/videomarketing"
+                                    class="hover:text-white transition"
+                                    >Videomarketing</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div
+                    class="pt-8 border-t border-white/20 text-center text-white/50 text-xs"
+                >
+                    © 2026 Plantilla 1. Todos los derechos reservados
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
