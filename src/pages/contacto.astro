@@ -1,0 +1,398 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Contáctanos - Estamos aquí para ayudarte a potenciar tu marca."
+        />
+        <title>Contacto - Plantilla 1</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .hero-bg {
+                background: var(--gradient-hero);
+            }
+        </style>
+    </head>
+    <body class="bg-white text-gray-900 overflow-x-hidden">
+        <!-- Navbar -->
+        <nav class="bg-white py-4 shadow-sm">
+            <div
+                class="container mx-auto px-6 flex justify-between items-center"
+            >
+                <div class="flex items-center">
+                    <a
+                        href="/"
+                        class="bg-indigo-600 p-2 rounded text-white font-bold text-xl px-4"
+                        >Logo.</a
+                    >
+                </div>
+                <div class="hidden md:flex space-x-8 text-gray-600 font-medium">
+                    <a href="/" class="hover:text-indigo-600 transition"
+                        >Inicio</a
+                    >
+                    <a href="#" class="hover:text-indigo-600 transition"
+                        >Nosotros</a
+                    >
+                    <a
+                        href="/administracion-de-redes"
+                        class="hover:text-indigo-600 transition">Servicios ▾</a
+                    >
+                    <a
+                        href="/contacto"
+                        class="text-indigo-600 font-bold border-b-2 border-indigo-600 pb-1"
+                        >Contacto</a
+                    >
+                </div>
+                <div class="flex space-x-4 text-gray-600">
+                    <span
+                        class="cursor-pointer hover:text-indigo-600 transition"
+                        >f</span
+                    >
+                    <span
+                        class="cursor-pointer hover:text-indigo-600 transition"
+                        >📷</span
+                    >
+                    <span
+                        class="cursor-pointer hover:text-indigo-600 transition"
+                        >🛒</span
+                    >
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section
+            class="hero-bg py-16 md:py-24 text-white relative overflow-hidden"
+        >
+            <div class="container mx-auto px-6">
+                <div
+                    class="flex flex-col md:flex-row items-center justify-between gap-8"
+                >
+                    <!-- Text Content -->
+                    <div class="md:w-1/2">
+                        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                            Contacto
+                        </h1>
+                        <p class="text-white/80 text-lg max-w-md">
+                            ¡Ponte en contacto con nosotros y prepárate para
+                            hacer volar tu marca al infinito y más allá!
+                        </p>
+                    </div>
+
+                    <!-- Image with floating icons -->
+                    <div class="md:w-1/2 relative flex justify-center">
+                        <div class="relative">
+                            <!-- Main Image -->
+                            <div
+                                class="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden bg-white/10"
+                            >
+                                <img
+                                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop"
+                                    alt="Contacto"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+
+                            <!-- Floating Icons -->
+                            <div
+                                class="absolute -top-2 right-10 bg-blue-500 p-3 rounded-xl shadow-lg"
+                            >
+                                <span class="text-white text-lg">💬</span>
+                            </div>
+                            <div
+                                class="absolute top-8 -right-4 bg-green-500 p-3 rounded-xl shadow-lg"
+                            >
+                                <span class="text-white text-lg">📞</span>
+                            </div>
+                            <div
+                                class="absolute bottom-16 -left-4 bg-blue-600 p-3 rounded-xl shadow-lg"
+                            >
+                                <span class="text-white text-lg">💬</span>
+                            </div>
+                            <div
+                                class="absolute bottom-4 right-0 bg-yellow-500 p-3 rounded-xl shadow-lg"
+                            >
+                                <span class="text-lg">🤖</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div
+                    class="grid md:grid-cols-2 gap-12 md:gap-20 max-w-6xl mx-auto"
+                >
+                    <!-- Contact Info -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                            Contáctanos
+                        </h2>
+                        <p class="text-gray-500 mb-8 leading-relaxed">
+                            Completa este breve formulario y déjanos saber cómo
+                            podemos ayudarte a alcanzar tus metas de marketing.
+                        </p>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center space-x-3">
+                                <span class="text-indigo-600">📧</span>
+                                <span class="text-gray-600"
+                                    >correo@correo.com</span
+                                >
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-indigo-600">📱</span>
+                                <span class="text-gray-600">55 555 555 55</span>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="flex space-x-4">
+                            <a
+                                href="#"
+                                class="w-10 h-10 bg-gray-800 hover:bg-indigo-600 rounded-full flex items-center justify-center text-white transition"
+                            >
+                                f
+                            </a>
+                            <a
+                                href="#"
+                                class="w-10 h-10 bg-gray-800 hover:bg-indigo-600 rounded-full flex items-center justify-center text-white transition"
+                            >
+                                𝕏
+                            </a>
+                            <a
+                                href="#"
+                                class="w-10 h-10 bg-gray-800 hover:bg-indigo-600 rounded-full flex items-center justify-center text-white transition"
+                            >
+                                ▶
+                            </a>
+                            <a
+                                href="#"
+                                class="w-10 h-10 bg-gray-800 hover:bg-indigo-600 rounded-full flex items-center justify-center text-white transition"
+                            >
+                                in
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div>
+                        <form id="contactForm" class="space-y-5">
+                            <div class="grid grid-cols-2 gap-4">
+                                <input
+                                    type="text"
+                                    name="nombre"
+                                    required
+                                    placeholder="Nombre"
+                                    class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition outline-none"
+                                />
+                                <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    placeholder="Email"
+                                    class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition outline-none"
+                                />
+                            </div>
+
+                            <input
+                                type="text"
+                                name="asunto"
+                                placeholder="Asunto"
+                                class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition outline-none"
+                            />
+
+                            <textarea
+                                name="mensaje"
+                                rows="5"
+                                required
+                                placeholder="Mensaje"
+                                class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition outline-none resize-none"
+                            ></textarea>
+
+                            <button
+                                type="submit"
+                                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg transition-all uppercase tracking-wider text-sm"
+                            >
+                                Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="w-full h-96 md:h-[500px] relative">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.661430878399!2d-99.16869692394668!3d19.427023281862476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5bd1563%3A0x6c366f0e2de02ff7!2sZócalo%2C%20Centro%20Histórico%20de%20la%20Cdad.%20de%20México%2C%2006000%20Ciudad%20de%20México%2C%20CDMX%2C%20México!5e0!3m2!1ses!2sus!4v1700000000000!5m2!1ses!2sus"
+                class="w-full h-full border-0 grayscale"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-indigo-700 text-white py-16">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                    <!-- Logo & Social -->
+                    <div>
+                        <div
+                            class="bg-white text-indigo-700 p-3 rounded font-bold text-2xl px-5 inline-block mb-6"
+                        >
+                            Logo.
+                        </div>
+                        <div class="flex space-x-3">
+                            <a
+                                href="#"
+                                class="w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition"
+                                >f</a
+                            >
+                            <a
+                                href="#"
+                                class="w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition"
+                                >𝕏</a
+                            >
+                            <a
+                                href="#"
+                                class="w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition"
+                                >▶</a
+                            >
+                            <a
+                                href="#"
+                                class="w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition"
+                                >in</a
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Información de contacto -->
+                    <div>
+                        <h4 class="font-bold mb-4 text-sm">
+                            Información de contacto
+                        </h4>
+                        <ul class="space-y-3 text-white/80 text-sm">
+                            <li class="flex items-center space-x-2">
+                                <span>📞</span>
+                                <span>(123) 456 7890</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <span>📧</span>
+                                <span>example@agency.com</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span>📍</span>
+                                <span
+                                    >457 Morningview Lane<br />New York USA</span
+                                >
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span>🕐</span>
+                                <span
+                                    >Lunes – viernes<br />9:00 am a 5:00 pm</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Navegación -->
+                    <div>
+                        <h4 class="font-bold mb-4 text-sm">Navegación</h4>
+                        <ul class="space-y-3 text-white/80 text-sm">
+                            <li>
+                                <a href="/" class="hover:text-white transition"
+                                    >Inicio</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/contacto"
+                                    class="hover:text-white transition"
+                                    >Contacto</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-white transition"
+                                    >Nosotros</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Servicios -->
+                    <div>
+                        <h4 class="font-bold mb-4 text-sm">Servicios</h4>
+                        <ul class="space-y-3 text-white/80 text-sm">
+                            <li>
+                                <a
+                                    href="/administracion-de-redes"
+                                    class="hover:text-white transition"
+                                    >Administración de Redes</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-white transition"
+                                    >Agente IA</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-white transition"
+                                    >Campañas</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-white transition"
+                                    >Creadores UGC</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-white transition"
+                                    >Desarrollo Web</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-white transition"
+                                    >Diseño Gráfico</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-white transition"
+                                    >Embudos de Venta</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-white transition"
+                                    >Videomarketing</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div
+                    class="pt-8 border-t border-white/20 text-center text-white/60 text-xs"
+                >
+                    © 2026 Plantilla 1. Todos los derechos reservados
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            document
+                .getElementById("contactForm")
+                ?.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    const formData = new FormData(this);
+                    const data = Object.fromEntries(formData);
+                    console.log("Form submitted:", data);
+                    alert("¡Gracias por tu mensaje! Te contactaremos pronto.");
+                    this.reset();
+                });
+        </script>
+    </body>
+</html>
